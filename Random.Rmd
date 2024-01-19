@@ -1,0 +1,27 @@
+---
+title: "My Random Presentation"
+output: ioslides_presentation
+date: "2024-01-19"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(plotly)
+```
+
+## My Random Presentation
+
+In this 3 page presentation, (almost) everything you will see on the third page is randomly generated. Random title, random data, random axis labels... 
+
+## QTBGYKBHWG
+
+```{r random, echo = FALSE}
+mydata <- matrix(sort(rnorm(100*100)), nrow = 100, ncol = 100)
+```
+
+```{r random2}
+plottitle <- toString(sample(LETTERS, 10, replace=TRUE))
+plot_ly(z = ~mydata, type = "surface") %>%
+        layout(title = plottitle)
+
+```
